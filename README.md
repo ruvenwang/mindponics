@@ -15,7 +15,7 @@ This diagram illustrates the core components and their relationships within the 
 
 ![Mindponics System Architecture Diagram](mindponics.png)
 
-```mermaid
+
 graph TD
     A[AquaMaestro] --> B[HydroGuardian]
     A --> C[PiscinePro]
@@ -28,12 +28,16 @@ graph TD
     E --> J[Biofilter Metrics]
     F --> K[Climate Sensors]
 
-## Prerequisites
+## Specialized Agents
 
-- Python 3.10+
-- Google Cloud SDK (`gcloud` CLI) authenticated
-- A Google Cloud Project with Vertex AI API enabled
-- `GOOGLE_CLOUD_PROJECT` environment variable set (or configured in `.env` / `config/settings.yaml`)
+| Agent Name     | Role             | Key Responsibilities                                                  |
+|----------------|------------------|-----------------------------------------------------------------------|
+| AquaMaestro    | Orchestrator     | Coordinates all agents, handles user queries                          |
+| HydroGuardian  | Water Quality    | Monitors pH, ammonia, nitrites, nitrates, DO                          |
+| PiscinePro     | Fish Health      | Manages fish health, feeding, disease detection                       |
+| FloraFriend    | Plant Growth     | Optimizes plant health, nutrient management                           |
+| BiofilterBuddy | Bacteria Management | Maintains nitrification cycle, biofilter health                     |
+| ClimateController | Environment Control | Manages temperature, humidity, light cycles                     |
 
 ## Setup
 
