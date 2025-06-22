@@ -16,18 +16,6 @@ This diagram illustrates the core components and their relationships within the 
 ![Mindponics System Architecture Diagram](mindponics.png)
 
 
-graph TD
-    A[AquaMaestro] --> B[HydroGuardian]
-    A --> C[PiscinePro]
-    A --> D[FloraFriend]
-    A --> E[BiofilterBuddy]
-    A --> F[ClimateController]
-    B --> G[Water Sensors]
-    C --> H[Fish Health DB]
-    D --> I[Plant Knowledge]
-    E --> J[Biofilter Metrics]
-    F --> K[Climate Sensors]
-
 ## Specialized Agents
 
 | Agent Name     | Role             | Key Responsibilities                                                  |
