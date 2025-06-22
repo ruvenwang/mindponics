@@ -1,13 +1,18 @@
-# MindPonics - Multi-Agent Aquaponics AI
+# Mindponics: Aquaponics Multi-Agent System
 
-MindPonics is an AI-powered multi-agent system designed to assist with the design, monitoring, and management of aquaponic systems. It leverages Google Cloud's Agent Development Kit (ADK) and Gemini models.
+Mindponics is an advanced aquaponics monitoring and management system powered by Google's Agent Development Kit (ADK). This project uses a multi-agent architecture where specialized AI agents collaborate to optimize and maintain a balanced aquaponics ecosystem.
 
-## Project Goal
+## Key Features
 
-To create a collaborative team of specialized AI agents that can:
-- Automate complex processes in aquaponics.
-- Analyze data and provide insights.
-- Offer intelligent assistance for system users.
+Multi-Agent Architecture: Six specialized agents working in harmony
+
+Real-time Monitoring: Continuous tracking of water, fish, plant, and environmental parameters
+
+Intelligent Recommendations: AI-driven insights for system optimization
+
+Predictive Maintenance: Early detection of potential issues
+
+Modular Design: Easy to extend with new agents and functionality
 
 This project is being developed for the "Agent Development Kit Hackathon with Google Cloud."
 
