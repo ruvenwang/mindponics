@@ -108,11 +108,46 @@ adk run Mindponics
 ## Usage Examples
 
 ### Checking Water Quality
-'''text
+```bash
     User: What's the current water quality status?
-AquaMaestro: Consulting HydroGuardian...
-HydroGuardian: Current pH: 7.2, Ammonia: 0.3 mg/L, Nitrites: 0.1 mg/L. 
-               Water quality is optimal. No action needed.
-'''
-
-
+    AquaMaestro: Consulting HydroGuardian...
+    HydroGuardian: Current pH: 7.2, Ammonia: 0.3 mg/L, Nitrites: 0.1 mg/L. 
+                   Water quality is optimal. No action needed.
+```
+### Diagnosing Plant Issues
+```bash
+    User: My lettuce leaves are turning yellow. What should I do?
+    AquaMaestro: Delegating to FloraFriend...
+    FloraFriend: Yellow leaves typically indicate nitrogen deficiency. 
+                 Recommend increasing nitrate levels to 40-60 ppm.
+```
+### System Optimization
+```bash
+User: How can I improve overall system efficiency?
+AquaMaestro: Coordinating with all specialists...
+- HydroGuardian: Recommends reducing feed to lower ammonia
+- PiscinePro: Suggests adjusting feeding schedule
+- FloraFriend: Proposes increasing plant density
+- BiofilterBuddy: Advises adding beneficial bacteria
+- ClimateController: Suggests optimizing light cycles
+```
+## Directory Structure
+```bash
+Mindponics/
+├── agent/                   # Main agent module
+│   ├── __init__.py
+│   └── mindponics_agent.py  # Root agent definition
+├── config/
+│   └── settings.yaml        # Configuration file
+├── sub_agents/              # Specialized agents
+│   ├── water/               # HydroGuardian
+│   ├── fish/                # PiscinePro
+│   ├── plant/               # FloraFriend
+│   ├── bacteria/            # BiofilterBuddy
+│   ├── environment/         # ClimateController
+│   └── orchestrator/        # AquaMaestro
+├── utils/                   # Utility functions
+│   └── sensor_utils.py      # Sensor data handling
+├── requirements.txt         # Dependencies
+└── README.md                # This file
+```
