@@ -109,17 +109,17 @@ adk run Mindponics
 
 ### Checking Water Quality
 ```bash
-    User: What's the current water quality status?
-    AquaMaestro: Consulting HydroGuardian...
-    HydroGuardian: Current pH: 7.2, Ammonia: 0.3 mg/L, Nitrites: 0.1 mg/L. 
-                   Water quality is optimal. No action needed.
+User: What's the current water quality status?
+AquaMaestro: Consulting HydroGuardian...
+HydroGuardian: Current pH: 7.2, Ammonia: 0.3 mg/L, Nitrites: 0.1 mg/L.
+Water quality is optimal. No action needed.
 ```
 ### Diagnosing Plant Issues
 ```bash
-    User: My lettuce leaves are turning yellow. What should I do?
-    AquaMaestro: Delegating to FloraFriend...
-    FloraFriend: Yellow leaves typically indicate nitrogen deficiency. 
-                 Recommend increasing nitrate levels to 40-60 ppm.
+User: My lettuce leaves are turning yellow. What should I do?
+AquaMaestro: Delegating to FloraFriend...
+FloraFriend: Yellow leaves typically indicate nitrogen deficiency. 
+Recommend increasing nitrate levels to 40-60 ppm.
 ```
 ### System Optimization
 ```bash
@@ -151,3 +151,22 @@ Mindponics/
 ├── requirements.txt         # Dependencies
 └── README.md                # This file
 ```
+## Contributing
+
+We welcome contributions! Please follow these steps:
+
+1.  Fork the repository
+2.  Create a new branch (`git checkout -b feature/your-feature`)
+3.  Commit your changes (`git commit -am 'Add some feature'`)
+4.  Push to the branch (`git push origin feature/your-feature`)
+5.  Create a new Pull Request
+
+## License
+
+This project is licensed under the Apache License 2.0 - see the LICENSE file for details.
+
+## Acknowledgments
+
+* Google ADK team
+* Aquaponics research community
+
