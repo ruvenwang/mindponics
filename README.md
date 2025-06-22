@@ -39,22 +39,64 @@ graph TD
 | BiofilterBuddy | Bacteria Management | Maintains nitrification cycle, biofilter health                     |
 | ClimateController | Environment Control | Manages temperature, humidity, light cycles                     |
 
-## Setup
+## Getting Started
 
-1.  **Clone the repository:**
+### Prerequisites
+
+* Python 3.10+
+* Google ADK
+* Google Cloud account (for deployment)
+* Virtual environment (recommended)
+
+### Installation
+
+1.  Clone the repository:
+
     ```bash
-    git clone <your-repo-url>
-    cd mindponics
+    git clone [https://github.com/your-username/Mindponics.git](https://github.com/your-username/Mindponics.git)
+    cd Mindponics
     ```
-2.  **Create and activate a virtual environment:**
+
+2. Create and activate a virtual environment:
+
     ```bash
-    python -m venv venv
-    source venv/bin/activate  # On Windows: venv\Scripts\activate
+    python -m venv .venv
+    source .venv/bin/activate   # Linux/Mac
+    .venv\Scripts\activate     # Windows
     ```
-3.  **Install dependencies:**
+
+3.  Install dependencies:
+
     ```bash
     pip install -r requirements.txt
     ```
-4.  **Configure:**
-    - Copy `.env.example` to `.env` (if you create an example) and set `GOOGLE_CLOUD_PROJECT`.
-    - Review `config/settings.yaml` (though defaults should work with GCP project ID from `.env`).
+
+4.  Set up Google ADK:
+
+    ```bash
+    pip install google-adk
+    ```
+
+## Configuration
+
+1.  Create a `config/settings.yaml` file with your agent configurations:
+
+    ```yaml
+    agents:
+      - name: root_agent
+        type: root
+        config:
+          orchestrator_id: orchestrator
+      - name: water_agent
+        type: water_quality
+
+    # Add configurations for other agents
+    ```
+
+2.  Set up environment variables for Google Cloud integration:
+
+    ```bash
+    export GOOGLE_APPLICATION_CREDENTIALS="path/to/your/service-account-file.json"
+    ```
+
+## Running the System
