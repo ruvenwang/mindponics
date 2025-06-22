@@ -4,17 +4,12 @@ Mindponics is an advanced aquaponics monitoring and management system powered by
 
 ## Key Features
 
-Multi-Agent Architecture: Six specialized agents working in harmony
-
-Real-time Monitoring: Continuous tracking of water, fish, plant, and environmental parameters
-
-Intelligent Recommendations: AI-driven insights for system optimization
-
-Predictive Maintenance: Early detection of potential issues
-
-Modular Design: Easy to extend with new agents and functionality
-
-This project is being developed for the "Agent Development Kit Hackathon with Google Cloud."
+-Multi-Agent Architecture: Six specialized agents working in harmony
+-Real-time Monitoring: Continuous tracking of water, fish, plant, and environmental parameters
+-Intelligent Recommendations: AI-driven insights for system optimization
+-Predictive Maintenance: Early detection of potential issues
+-Modular Design: Easy to extend with new agents and functionality
+-This project is being developed for the "Agent Development Kit Hackathon with Google Cloud."
 
 ## Architecture
 
