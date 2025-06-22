@@ -13,14 +13,16 @@ Mindponics is an advanced aquaponics monitoring and management system powered by
 ## System Architecture
 
 graph TD
-    A[AquaMaestro<br>Orchestrator] --> B[HydroGuardian<br>Water Quality]
-    A --> C[PiscinePro<br>Fish Health]
-    A --> D[FloraFriend<br>Plant Growth]
-    A --> E[BiofilterBuddy<br>Bacteria Management]
-    A --> F[ClimateController<br>Environment]
-    B --> G[External Sensors]
-    C --> H[Fish Health Database]
-    D --> I[Plant Knowledge Base]
+    A[AquaMaestro] --> B[HydroGuardian]
+    A --> C[PiscinePro]
+    A --> D[FloraFriend]
+    A --> E[BiofilterBuddy]
+    A --> F[ClimateController]
+    B --> G[Water Sensors]
+    C --> H[Fish Health DB]
+    D --> I[Plant Knowledge]
+    E --> J[Biofilter Metrics]
+    F --> K[Climate Sensors]
 
 ## Prerequisites
 
