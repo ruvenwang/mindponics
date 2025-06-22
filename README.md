@@ -4,19 +4,23 @@ Mindponics is an advanced aquaponics monitoring and management system powered by
 
 ## Key Features
 
--Multi-Agent Architecture: Six specialized agents working in harmony
--Real-time Monitoring: Continuous tracking of water, fish, plant, and environmental parameters
--Intelligent Recommendations: AI-driven insights for system optimization
--Predictive Maintenance: Early detection of potential issues
--Modular Design: Easy to extend with new agents and functionality
--This project is being developed for the "Agent Development Kit Hackathon with Google Cloud."
+- **Multi-Agent Architecture:** Six specialized agents working in harmony
+- **Real-time Monitoring:** Continuous tracking of water, fish, plant, and environmental parameters
+- **Intelligent Recommendations:** AI-driven insights for system optimization
+- **Predictive Maintenance:** Early detection of potential issues
+- **Modular Design:** Easy to extend with new agents and functionality
 
-## Architecture
+## System Architecture
 
-The system consists of several specialized agents orchestrated by a central `OrchestratorAgent`:
-- **OrchestratorAgent (AquaMaestro):** Routes user queries and coordinates specialist agents.
-- **WaterAgent (HydroGuardian):** Manages water quality information.
-- *(Future Agents: FishAgent, PlantAgent, BacteriaAgent, EnvironmentAgent)*
+graph TD
+    A[AquaMaestro<br>Orchestrator] --> B[HydroGuardian<br>Water Quality]
+    A --> C[PiscinePro<br>Fish Health]
+    A --> D[FloraFriend<br>Plant Growth]
+    A --> E[BiofilterBuddy<br>Bacteria Management]
+    A --> F[ClimateController<br>Environment]
+    B --> G[External Sensors]
+    C --> H[Fish Health Database]
+    D --> I[Plant Knowledge Base]
 
 ## Prerequisites
 
