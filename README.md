@@ -11,7 +11,11 @@ Mindponics is an advanced aquaponics monitoring and management system powered by
 - **Modular Design:** Easy to extend with new agents and functionality
 
 ## System Architecture
+This diagram illustrates the core components and their relationships within the AquaMaestro system.
 
+![Mindponics System Architecture Diagram](images/mindponics.png)
+
+```mermaid
 graph TD
     A[AquaMaestro] --> B[HydroGuardian]
     A --> C[PiscinePro]
