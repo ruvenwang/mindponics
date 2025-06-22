@@ -100,3 +100,11 @@ graph TD
     ```
 
 ## Running the System
+
+```bash
+adk run Mindponics
+User: What's the current water quality status?
+AquaMaestro: Consulting HydroGuardian...
+HydroGuardian: Current pH: 7.2, Ammonia: 0.3 mg/L, Nitrites: 0.1 mg/L.
+               Water quality is optimal. No action needed.
+
