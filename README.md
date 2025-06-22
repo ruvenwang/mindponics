@@ -31,7 +31,7 @@ This diagram illustrates the core components and their relationships within the 
 
 ### Prerequisites
 
-* Python 3.10+
+* Python 3.13+
 * Google ADK
 * Google Cloud account (for deployment)
 * Virtual environment (recommended)
