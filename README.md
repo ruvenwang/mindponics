@@ -103,8 +103,16 @@ graph TD
 
 ```bash
 adk run Mindponics
-User: What's the current water quality status?
+```
+
+## Usage Examples
+
+### Checking Water Quality
+'''text
+    User: What's the current water quality status?
 AquaMaestro: Consulting HydroGuardian...
-HydroGuardian: Current pH: 7.2, Ammonia: 0.3 mg/L, Nitrites: 0.1 mg/L.
+HydroGuardian: Current pH: 7.2, Ammonia: 0.3 mg/L, Nitrites: 0.1 mg/L. 
                Water quality is optimal. No action needed.
+'''
+
 
