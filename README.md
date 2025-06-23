@@ -201,8 +201,3 @@ We welcome contributions! Please follow these steps:
 ## License
 
 This project is licensed under the Apache License 2.0 - see the LICENSE file for details.
-
-## Acknowledgments
-
-* Google ADK team
-* Aquaponics research community
