@@ -138,25 +138,55 @@ AquaMaestro: Coordinating with all specialists...
 ## Directory Structure
 ```bash
 Mindponics/
-├── agent/                   # Main agent module
-│   ├── __init__.py
-│   └── mindponics_agent.py  # Root agent definition
 ├── config/
-│   └── settings.yaml        # Configuration file
-├── mindponics/              # Specialized agents
-│   ├── water/               # HydroGuardian
-│   ├── fish/                # PiscinePro
-│   ├── plant/               # FloraFriend
-│   ├── bacteria/            # BiofilterBuddy
-│   ├── environment/         # ClimateController
-│   └── orchestrator/        # AquaMaestro
-├── utils/                   # Utility functions
-│   └── sensor_utils.py      # Sensor data handling
+│   └── settings.yaml        
+├── deployment/
+│   ├── deploy.py
+│   └── test_deployments.py
+├── eval/
+│   ├── __init__.py
+│   │   ├── data/              
+│   │   │   └── mindponics_basic_queries_v1.json
+│   └── settings.yaml        
+├── test/
+│   └── test_agents.py        
+├── mindponics/
+│   ├── sub_agents
+│   │   ├── bacteria/
+│   │   │   ├── __init__.py
+│   │   │   ├── agent.py                 
+│   │   │   └── prompt.py
+│   │   ├── environment/
+│   │   │   ├── __init__.py
+│   │   │   ├── agent.py                 
+│   │   │   └── prompt.py
+│   │   ├── fish/
+│   │   │   ├── __init__.py
+│   │   │   ├── agent.py                 
+│   │   │   └── prompt.py
+│   │   ├── orchestrator/
+│   │   │   ├── __init__.py
+│   │   │   ├── agent.py                 
+│   │   │   └── prompt.py
+│   │   ├── plant/
+│   │   │   ├── __init__.py
+│   │   │   ├── agent.py                 
+│   │   │   └── prompt.py
+│   │   ├── water/
+│   │   │   ├── __init__.py
+│   │   │   ├── agent.py                 
+│   │   │   └── prompt.py                  
+│   ├── __init__.py            
+│   ├── agent.py         
+│   └── prompt.py        
+├── utils/                   
+│   ├── __init__.py        
+│   └── sensor_utils.py     
 ├── .env    
 ├── mindponics.png 
 ├── poetry.lock
-├── pyproject.toml      # Dependencies
-└── README.md                # This file
+├── pyproject.toml     
+└── README.md      
 ```
 ## Contributing
 
