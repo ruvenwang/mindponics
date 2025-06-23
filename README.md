@@ -38,59 +38,75 @@ This diagram illustrates the core components and their relationships within the 
 
 ### Installation
 
-1.  Clone the repository:
+1.  Prerequisites:
+
+    ```bash
+    pip install poetry
+    ```
+
+2. Installation:
 
     ```bash
     git clone [https://github.com/your-username/Mindponics.git](https://github.com/your-username/Mindponics.git)
     cd Mindponics
+    # Install the package and dependencies.
+    poetry install
     ```
 
-2. Create and activate a virtual environment:
+3.  Configuration`:
 
-    ```bash
-    python -m venv .venv
-    source .venv/bin/activate   # Linux/Mac
-    .venv\Scripts\activate     # Windows
-    ```
+    *   Set up Google Cloud credentials.
 
-3.  Install dependencies:
+        *   You may set the following environment variables in your shell, or in
+            a `.env` file instead.
 
-    ```bash
-    pip install -r requirements.txt
-    ```
+        ```bash
+        export GOOGLE_GENAI_USE_VERTEXAI=true
+        export GOOGLE_CLOUD_PROJECT=<your-project-id>
+        export GOOGLE_CLOUD_LOCATION=<your-project-location>
+        export GOOGLE_CLOUD_STORAGE_BUCKET=<your-storage-bucket>  # Only required for deployment on Agent Engine
+        ```
 
-4.  Set up Google ADK:
+    *   Authenticate your GCloud account.
 
-    ```bash
-    pip install google-adk
-    ```
+        ```bash
+        gcloud auth application-default login
+        gcloud auth application-default set-quota-project $GOOGLE_CLOUD_PROJECT
+        ```
 
-## Configuration
 
-1.  Create a `config/settings.yaml` file with your agent configurations:
+## Running the Agent
 
-    ```yaml
-    agents:
-      - name: root_agent
-        type: root
-        config:
-          orchestrator_id: orchestrator
-      - name: water_agent
-        type: water_quality
+**Using `adk`**
 
-    # Add configurations for other agents
-    ```
-
-2.  Set up environment variables for Google Cloud integration:
-
-    ```bash
-    export GOOGLE_APPLICATION_CREDENTIALS="path/to/your/service-account-file.json"
-    ```
-
-## Running the System
+ADK provides convenient ways to bring up agents locally and interact with them.
+You may talk to the agent using the CLI:
 
 ```bash
-adk run Mindponics
+adk run mindponics
+```
+
+Or on a web interface:
+
+```bash
+ adk web
+```
+
+The command `adk web` will start a web server on your machine and print the URL.
+You may open the URL, select "mindponics" in the top-left drop-down menu, and
+a chatbot interface will appear on the right. The conversation is initially
+blank. Here are some example requests you may ask the Financial Advisor to verify:
+
+```
+hi
+```
+
+Sampled responses of these requrests are shown below in the [Example
+Interaction](#example-interaction) section.
+
+```
+Hello! I'm AquaMaestro, the central orchestrator of the mindponics aquaponics AI system. I'm here to help you with any questions or concerns you may have about your aquaponics system. How can I help you today?
+
 ```
 
 ## Usage Examples
@@ -127,7 +143,7 @@ Mindponics/
 │   └── mindponics_agent.py  # Root agent definition
 ├── config/
 │   └── settings.yaml        # Configuration file
-├── sub_agents/              # Specialized agents
+├── mindponics/              # Specialized agents
 │   ├── water/               # HydroGuardian
 │   ├── fish/                # PiscinePro
 │   ├── plant/               # FloraFriend
@@ -136,7 +152,10 @@ Mindponics/
 │   └── orchestrator/        # AquaMaestro
 ├── utils/                   # Utility functions
 │   └── sensor_utils.py      # Sensor data handling
-├── requirements.txt         # Dependencies
+├── .env    
+├── mindponics.png 
+├── poetry.lock
+├── pyproject.toml      # Dependencies
 └── README.md                # This file
 ```
 ## Contributing
@@ -157,4 +176,3 @@ This project is licensed under the Apache License 2.0 - see the LICENSE file for
 
 * Google ADK team
 * Aquaponics research community
-
